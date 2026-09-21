@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "workflows": ["audit", "spec", "architect", "build", "review"],
+  "shared": [
+    {
+      "source": "shared/workflows",
+      "destination": ".agentic-workflow/workflows"
+    },
+    {
+      "source": "shared/STATE_CONTRACT.md",
+      "destination": ".agentic-workflow/STATE_CONTRACT.md"
+    }
+  ],
+  "providers": {
+    "codex": [
+      {
+        "source": "adapters/codex/skills",
+        "destination": ".agents/skills"
+      }
+    ],
+    "claude": [
+      {
+        "source": "adapters/claude/commands",
+        "destination": ".claude/commands"
+      }
+    ],
+    "opencode": [
+      {
+        "source": "adapters/opencode/commands",
+        "destination": ".opencode/commands"
+      }
+    ]
+  }
+}
